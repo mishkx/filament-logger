@@ -5,7 +5,7 @@ namespace MrAdder\FilamentLogger\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
-use Spatie\Activitylog\ActivitylogServiceProvider;
+use Spatie\Activitylog\Support\Config;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
 /**
@@ -32,7 +32,7 @@ class DownloadActivityExportController
 
         if (is_string($ability) && filled($ability)) {
             abort_unless(
-                Gate::allows($ability, ActivitylogServiceProvider::determineActivityModel()),
+                Gate::allows($ability, Config::activityModel()),
                 403,
             );
         }

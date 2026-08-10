@@ -13,7 +13,7 @@ use MrAdder\FilamentLogger\Models\ExportPreset;
 use MrAdder\FilamentLogger\Support\ActivityExportCriteria;
 use MrAdder\FilamentLogger\Support\ActivityExporter;
 use MrAdder\FilamentLogger\Support\ActivityExportPresetManager;
-use Spatie\Activitylog\ActivitylogServiceProvider;
+use Spatie\Activitylog\Support\Config;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
 /**
@@ -37,7 +37,7 @@ trait HandlesActivityExports
             return true;
         }
 
-        return Gate::allows($ability, ActivitylogServiceProvider::determineActivityModel());
+        return Gate::allows($ability, Config::activityModel());
     }
 
     public static function canManageExportPresets(): bool

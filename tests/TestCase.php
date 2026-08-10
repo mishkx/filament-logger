@@ -15,7 +15,7 @@ use MrAdder\FilamentLogger\FilamentLoggerServiceProvider;
 use MrAdder\FilamentLogger\Support\ActivityAlertRules;
 use MrAdder\FilamentLogger\Support\ActivityDisplay;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\Activitylog\ActivitylogServiceProvider as SpatieActivitylogServiceProvider;
+use Spatie\Activitylog\Support\Config as SpatieActivitylogServiceProvider;
 
 class TestCase extends Orchestra
 {
