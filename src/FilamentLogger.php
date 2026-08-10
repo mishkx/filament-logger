@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use MrAdder\FilamentLogger\Support\ActivityAlertDispatcher;
 use MrAdder\FilamentLogger\Support\ActivityRiskResolver;
 use MrAdder\FilamentLogger\Support\LogDataSanitizer;
-use Spatie\Activitylog\ActivityLogger;
-use Spatie\Activitylog\ActivityLogStatus;
+use Spatie\Activitylog\Support\ActivityLogger;
+use Spatie\Activitylog\Support\ActivityLogStatus;
 use Spatie\Activitylog\Contracts\Activity as ActivityContract;
 
 class FilamentLogger
